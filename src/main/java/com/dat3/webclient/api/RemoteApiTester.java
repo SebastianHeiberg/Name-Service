@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -95,14 +94,11 @@ public class RemoteApiTester implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-//    System.out.println(callSlowEndpoint().toString());
-//    String randomStr = callSlowEndpoint().block();
-//    System.out.println(randomStr);
-//    callSlowEndpointBlocking();
-//    callSlowEndpointNonBlocking();
-//    System.out.println(getGenderForName("sebastian"));
-//    getGendersNonBlocking();
-//    getGendersBlocking();
+//den langsomme
+    callSlowEndpointBlocking();
+
+//den hurtige
+    callSlowEndpointNonBlocking();
 
   }
 }
